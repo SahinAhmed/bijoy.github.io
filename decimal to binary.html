@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+    <title></title>
+    <style type="text/css" media="all">
+      body{
+        background: #2dc6b4;
+        color: #348edb;
+      }
+
+    </style>
+  </head>
+<body>
+  <iframe src="http://0.0.0.0:8080/" frameborder="0"></iframe>
+<a href="http://0.0.0.0:8080/">click Me</a>
+<h2>JavaScript Convert Decimal to Binary</h2>
+
+<p id="demo"></p>
+<input type="number" placeholder="plese enter decimal">
+<button onclick="bin()">click me</button>
+<script>
+function bin(){
+var y=document.querySelector("input").value
+document.getElementById("demo").innerHTML ="binary:"+dec2bin(y)+"<br>hexadecimal:"+dec2bin1(y)+"<br>octal:"+dec2bin2(y);
+function dec2bin(dec){
+  return (dec >>> 0).toString(2);
+}
+function dec2bin1(dec){
+  return (dec >>> 0).toString(16);
+}
+function dec2bin2(dec){
+  return (dec >>> 0).toString(8);
+}
+}
+</script>
+
+</body>
+</html>
